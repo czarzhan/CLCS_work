@@ -1,0 +1,62 @@
+//*****************************************************************************
+//** MODULE: OMS_NoCommandValves_ObjAdaptor                                  **
+//**                                                                         **
+//** OVERVIEW: This IDL module defines the CORBA Object Adaptors for the OMS **
+//**           NoCommandValve IPC Interfaces.                                **
+//**                                                                         **
+//**                                                                         **
+//** RESPONSIBLE ENGINEER: Craig Roth                                        **
+//**                                                                         **
+//*****************************************************************************
+#ifndef OMS_NOCOMMANDVALVES_OBJADAPTOR_IDL    
+#define OMS_NOCOMMANDVALVES_OBJADAPTOR_IDL    
+
+#include "OMS_OmsBase_ObjAdaptor.idl"
+
+// -------------------------------------------------------------------------
+/**
+* The OMS_NoCommandValves_ObjAdaptor IDL module defines the CORBA Object 
+* Adaptors for the OMS NoCommandValve IPC interfaces.
+*   
+*/
+// -------------------------------------------------------------------------
+module OMS_NoCommandValves_ObjAdaptor {         
+   
+   //----------------------------------------------------------------------
+   /**
+   * OMS_NoCmdNoVpiValve 
+   */
+   //----------------------------------------------------------------------
+   interface NoCmdNoVpiValve : OMS_OmsBase_ObjAdaptor::BaseObject 
+   {  
+        
+      long notInstalled();
+
+      long notMated();
+
+      long matedToGseOpen();
+       
+      long matedToVehClosed();
+
+      long matedToVehPurge();
+
+      long matedToVehOpen();
+
+   };  // end NoCmdNoVpiValve
+
+
+   //----------------------------------------------------------------------
+   /**
+   * ManualValve 
+   */
+   //----------------------------------------------------------------------
+   interface ManualValve : OMS_OmsBase_ObjAdaptor::BaseObject
+   {
+
+      long toggle();
+
+   };  // end ManualValve
+    
+}; 
+
+#endif // OMS_NOCOMMANDVALVES_OBJADAPTOR_IDL

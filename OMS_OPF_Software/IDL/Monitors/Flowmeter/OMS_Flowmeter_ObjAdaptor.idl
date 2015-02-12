@@ -1,0 +1,43 @@
+//*****************************************************************************
+//** MODULE: OMS_Flowmeter_ObjAdaptor                                        **
+//**                                                                         **
+//** OVERVIEW: This IDL module defines the CORBA Object Adaptors for the     **
+//**           Flowmeter IPC Interfaces.                                     **
+//**                                                                         **
+//** RESPONSIBLE ENGINEER: Craig Roth                                        **
+//**                                                                         **
+//*****************************************************************************
+#ifndef OMS_FLOWMETER_OBJADAPTOR_IDL    
+#define OMS_FLOWMETER_OBJADAPTOR_IDL    
+
+#include "OMS_OmsBase_ObjAdaptor.idl"
+
+// ----------------------------------------------------------------------------
+/**
+* The OMS_Flowmeter_ObjAdaptor IDL module defines the CORBA Object Adaptors
+* for the OMS Flowmeter IPC interfaces.
+*   
+*/
+// ----------------------------------------------------------------------------
+module OMS_Flowmeter_ObjAdaptor {         
+   
+   //--------------------------------------------------------------------------
+   /**
+   * OpfFlowMeterDeltaP Adaptor
+   */
+   //--------------------------------------------------------------------------
+
+   interface OpfFlowMeterDeltaP : OMS_OmsBase_ObjAdaptor::BaseObject 
+   {  
+
+      long changeMode();
+
+      long startHighRate();
+
+      long stopHighRate();
+
+   };  // end OpfFlowMeterDeltaP
+    
+}; 
+
+#endif // OMS_FLOWMETER_OBJADAPTOR_IDL

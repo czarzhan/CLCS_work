@@ -1,0 +1,93 @@
+//=============================================================================
+//
+// NAME:  OMS_Manual_Valves.instance
+//
+// OVERVIEW:  Defines instance data for all Manual_Valves.
+//
+// RESPONSIBLE ENGINEER:  Craig Roth
+//
+//=============================================================================
+
+
+INSTANCE oms_com_FRCS_MV101
+{
+    PATH /OMS_ORB/FRCS/GHE_SYS/MV101
+
+    FD pState_ NOMSCOMMV101ST
+}
+
+
+INSTANCE oms_com_FRCS_MV102
+{
+    PATH /OMS_ORB/FRCS/GHE_SYS/MV102
+
+    FD pState_ NOMSCOMMV102ST
+}
+
+
+INSTANCE oms_com_LRCS_MV201
+{
+    PATH /OMS_ORB/APS/LAPS/RCS_GHE_SYS/MV201
+
+    FD pState_ NOMSCOMMV201ST
+}
+
+
+INSTANCE oms_com_LRCS_MV202
+{
+    PATH /OMS_ORB/APS/LAPS/RCS_GHE_SYS/MV202
+
+    FD pState_ NOMSCOMMV202ST
+}
+
+
+INSTANCE oms_com_RRCS_MV301
+{
+    PATH /OMS_ORB/APS/RAPS/RCS_GHE_SYS/MV301
+
+    FD pState_ NOMSCOMMV301ST
+}
+
+
+INSTANCE oms_com_RRCS_MV302
+{
+    PATH /OMS_ORB/APS/RAPS/RCS_GHE_SYS/MV302
+
+    FD pState_ NOMSCOMMV302ST
+}
+
+
+INSTANCE oms_com_LOMS_MV401
+{
+    PATH /OMS_ORB/APS/LAPS/OMS_GHE_SYS/MV401
+
+    FD pState_ NOMSCOMMV401ST
+
+}
+
+
+INSTANCE oms_com_LOMS_MV402
+{
+    PATH /OMS_ORB/APS/LAPS/OMS_GHE_SYS/MV402
+
+    FD pState_ NOMSCOMMV402ST
+
+}
+
+
+INSTANCE oms_com_ROMS_MV501
+{
+    PATH /OMS_ORB/APS/RAPS/OMS_GHE_SYS/MV501
+
+    FD pState_ NOMSCOMMV501ST
+
+}
+
+
+INSTANCE oms_com_ROMS_MV502
+{
+    PATH /OMS_ORB/APS/RAPS/OMS_GHE_SYS/MV502
+
+    FD pState_ NOMSCOMMV502ST
+
+}

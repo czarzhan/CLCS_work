@@ -1,0 +1,66 @@
+//=============================================================================
+//  Copyright (2001) National Aeronautics and Space Administration
+//                     All rights reserved.
+//=============================================================================
+//
+// NAME:  OMS_Vernier_Manifold.instance
+//
+// OVERVIEW:  Defines instance data for the Vernier Manifolds.
+//
+// RESPONSIBLE ENGINEER:  Craig Roth
+//
+//=============================================================================
+
+INSTANCE oms_com_FRCS_OX_MANF_5
+{
+   PATH /OMS_ORB/FRCS/PROP_SYS/OXID/MANF_5
+   FD pOffsetCorrectedPressure_ NOMSCOMFOXMANF5POC
+   FD pState_ NOMSCOMFRCSOXMANF5ST
+   FD pManifoldIsoStateRO_ NOMSFRCSLV158STATE
+   FD pManifoldLegPressureRO_ NOMSCOMFOXMLEG345POC
+}
+
+INSTANCE oms_com_FRCS_FU_MANF_5
+{
+   PATH /OMS_ORB/FRCS/PROP_SYS/FUEL/MANF_5
+   FD pOffsetCorrectedPressure_ NOMSCOMFFUMANF5POC
+   FD pState_ NOMSCOMFRCSFUMANF5ST
+   FD pManifoldIsoStateRO_ NOMSFRCSLV157STATE
+   FD pManifoldLegPressureRO_ NOMSCOMFFUMLEG345POC
+}
+
+INSTANCE oms_com_LRCS_OX_MANF_5
+{
+   PATH /OMS_ORB/APS/LAPS/RCS_PROP_SYS/OXID/MANF_5
+   FD pOffsetCorrectedPressure_ NOMSCOMLOXMANF5POC
+   FD pState_ NOMSCOMLRCSOXMANF5ST
+   FD pManifoldIsoStateRO_ NOMSLRCSLV258STATE
+   FD pManifoldLegPressureRO_ NOMSCOMLOXMLEG345POC
+}
+
+INSTANCE oms_com_LRCS_FU_MANF_5
+{
+   PATH /OMS_ORB/APS/LAPS/RCS_PROP_SYS/FUEL/MANF_5
+   FD pOffsetCorrectedPressure_ NOMSCOMLFUMANF5POC
+   FD pState_ NOMSCOMLRCSFUMANF5ST
+   FD pManifoldIsoStateRO_ NOMSLRCSLV257STATE
+   FD pManifoldLegPressureRO_ NOMSCOMLFUMLEG345POC
+}
+
+INSTANCE oms_com_RRCS_OX_MANF_5
+{
+   PATH /OMS_ORB/APS/RAPS/RCS_PROP_SYS/OXID/MANF_5
+   FD pOffsetCorrectedPressure_ NOMSCOMROXMANF5POC
+   FD pState_ NOMSCOMRRCSOXMANF5ST
+   FD pManifoldIsoStateRO_ NOMSRRCSLV358STATE
+   FD pManifoldLegPressureRO_ NOMSCOMROXMLEG345POC
+}
+
+INSTANCE oms_com_RRCS_FU_MANF_5
+{
+   PATH /OMS_ORB/APS/RAPS/RCS_PROP_SYS/FUEL/MANF_5
+   FD pOffsetCorrectedPressure_ NOMSCOMRFUMANF5POC
+   FD pState_ NOMSCOMRRCSFUMANF5ST
+   FD pManifoldIsoStateRO_ NOMSRRCSLV357STATE
+   FD pManifoldLegPressureRO_ NOMSCOMRFUMLEG345POC
+}

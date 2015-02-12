@@ -1,0 +1,199 @@
+//=============================================================================
+//
+// NAME: OMS_VehicleTests_ObjAdaptor
+//
+// OVERVIEW: This IDL module defines the CORBA IPC interfaces for the 
+//           VehicleTest IPC Interfaces.
+//
+// RESPONSIBLE ENGINEER: Craig Roth
+//
+//=============================================================================
+#ifndef OMS_VEHICLETESTS_OBJADAPTOR_IDL
+#define OMS_VEHICLETESTS_OBJADAPTOR_IDL
+
+#include "OMS_OmsBase_ObjAdaptor.idl"
+
+// -------------------------------------------------------------------------
+/**
+* The OMS_VehicleTests_ObjAdaptor IDL module defines the CORBA Object 
+* Adaptors for the OMS VehicleTest IPC interfaces.
+*   
+*/
+// -------------------------------------------------------------------------
+module OMS_VehicleTests_ObjAdaptor 
+{
+
+   //----------------------------------------------------------------------
+   /**
+   * CautionAndWarningTest 
+   */
+   //----------------------------------------------------------------------
+   interface CautionAndWarningTest : OMS_OmsBase_ObjAdaptor::BaseObject
+   {
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns off fwdRcsFd and leaves it off.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOffFwdRcsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns on fwdRcsFd and leaves it on.  Operator use only. 
+      */
+      //--------------------------------------------------------------------
+      long turnOnFwdRcsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns off leftRcsFd and leaves it off.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOffLeftRcsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns on leftRcsFd and leaves it on.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOnLeftRcsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns off rightRcsFd and leaves it off.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOffRightRcsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns on rightRcsFd and leaves it on.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOnRightRcsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns off leftOmsFd and leaves it off.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOffLeftOmsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns on leftOmsFd and leaves it on.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOnLeftOmsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns off rightOmsFd and leaves it off.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOffRightOmsFd();
+
+      //--------------------------------------------------------------------
+      /**
+      * Turns on rightOmsFd and leaves it on.  Operator use only.
+      */
+      //--------------------------------------------------------------------
+      long turnOnRightOmsFd();
+
+   }; // end CautionAndWarningTest
+
+   //----------------------------------------------------------------------
+   /**
+   * OMS_CockpitMeterTest 
+   */
+   //----------------------------------------------------------------------
+   interface CockpitMeterTest : OMS_OmsBase_ObjAdaptor::BaseObject
+   {
+
+      //--------------------------------------------------------------------
+      /**
+      * Set frcsOxidQty FD to operator input. 
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyFrcsOxid(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set frcsFuelQty FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyFrcsFuel(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set frcsLowest FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyFrcsLowest(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set lrcsOxidQty FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyLrcsOxid(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set lrcsFuelQty FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyLrcsFuel(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set lrcsLowest FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyLrcsLowest(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set rrcsOxidQty FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyRrcsOxid(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set rrcsFuelQty FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyRrcsFuel(in double param1);
+
+      //--------------------------------------------------------------------
+      /**
+      * Set rrcsLowest FD to operator input.
+      * 
+      * @param param1 Operator supplied quantity, ranging from 0-100%
+      */
+      //--------------------------------------------------------------------
+      long applyRrcsLowest(in double param1);
+
+   }; // end CockpitMeterTest
+
+}; // end OMS_VehicleTests_ObjAdaptor
+
+#endif // OMS_VEHICLETESTS_OBJADAPTOR_IDL

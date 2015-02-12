@@ -1,0 +1,121 @@
+//=============================================================================
+//
+// NAME:  OMS_OmsFeedlines.instance
+//
+// OVERVIEW:  Defines instance data for all OMS Feed lines.
+//
+// RESPONSIBLE ENGINEER:  Craig Roth
+//
+//=============================================================================
+
+
+INSTANCE oms_com_LOMS_OX_FDLINE
+{
+   PATH /OMS_ORB/APS/LAPS/OMS_PROP_SYS/OX_FDLINE
+
+FD pXfdLinePressureRO_         NOMSCOMXFDOXPOC
+FD pOmeInletLinePressureRO_    NOMSCOMLOMSOXINLTPOC
+FD pPropTankPressureRO_        NOMSCOMLOMSOXULGPOC
+FD pTkIsoValveAStateRO_        NOMSLOMSLV462STATE
+FD pTkIsoValveBStateRO_        NOMSLOMSLV464STATE
+FD pXfdIsoValveAStateRO_       NOMSLOMSLV472STATE
+FD pXfdIsoValveBStateRO_       NOMSLOMSLV474STATE
+FD pOmeFlangeStateRO_          NOMSLOMEFLANGEMATEST
+FD pState_                     NOMSCOMLOMSOXFDLNST
+FD pOffsetCorrectedPressure_   NOMSCOMLOMSOXFDLNPOC
+
+}
+
+INSTANCE oms_com_LOMS_FU_FDLINE
+{
+   PATH /OMS_ORB/APS/LAPS/OMS_PROP_SYS/FU_FDLINE
+
+FD pXfdLinePressureRO_         NOMSCOMXFDFUPOC
+FD pOmeInletLinePressureRO_    NOMSCOMLOMSFUINLTPOC
+FD pPropTankPressureRO_        NOMSCOMLOMSFUULGPOC
+FD pTkIsoValveAStateRO_        NOMSLOMSLV461STATE
+FD pTkIsoValveBStateRO_        NOMSLOMSLV463STATE
+FD pXfdIsoValveAStateRO_       NOMSLOMSLV471STATE
+FD pXfdIsoValveBStateRO_       NOMSLOMSLV473STATE
+FD pOmeFlangeStateRO_          NOMSLOMEFLANGEMATEST
+FD pState_                     NOMSCOMLOMSFUFDLNST
+FD pOffsetCorrectedPressure_   NOMSCOMLOMSFUFDLNPOC
+
+}
+
+INSTANCE oms_com_ROMS_OX_FDLINE
+{
+   PATH /OMS_ORB/APS/RAPS/OMS_PROP_SYS/OX_FDLINE
+
+FD pXfdLinePressureRO_         NOMSCOMXFDOXPOC
+FD pOmeInletLinePressureRO_    NOMSCOMROMSOXINLTPOC
+FD pPropTankPressureRO_        NOMSCOMROMSOXULGPOC
+FD pTkIsoValveAStateRO_        NOMSROMSLV562STATE
+FD pTkIsoValveBStateRO_        NOMSROMSLV564STATE
+FD pXfdIsoValveAStateRO_       NOMSROMSLV572STATE
+FD pXfdIsoValveBStateRO_       NOMSROMSLV574STATE
+FD pOmeFlangeStateRO_          NOMSROMEFLANGEMATEST
+FD pState_                     NOMSCOMROMSOXFDLNST
+FD pOffsetCorrectedPressure_   NOMSCOMROMSOXFDLNPOC
+
+}
+
+INSTANCE oms_com_ROMS_FU_FDLINE
+{
+   PATH /OMS_ORB/APS/RAPS/OMS_PROP_SYS/FU_FDLINE
+
+FD pXfdLinePressureRO_         NOMSCOMXFDFUPOC
+FD pOmeInletLinePressureRO_    NOMSCOMROMSFUINLTPOC
+FD pPropTankPressureRO_        NOMSCOMROMSFUULGPOC
+FD pTkIsoValveAStateRO_        NOMSROMSLV561STATE
+FD pTkIsoValveBStateRO_        NOMSROMSLV563STATE
+FD pXfdIsoValveAStateRO_       NOMSROMSLV571STATE
+FD pXfdIsoValveBStateRO_       NOMSROMSLV573STATE
+FD pOmeFlangeStateRO_          NOMSROMEFLANGEMATEST
+FD pState_                     NOMSCOMROMSFUFDLNST
+FD pOffsetCorrectedPressure_   NOMSCOMROMSFUFDLNPOC
+
+}
+
+
+//=============================================================================
+//  Temperature Analogs for the OMS Feedlines
+//=============================================================================
+
+
+INSTANCE oms_com_LOMS_OX_FDLINE_T
+{
+   PATH /OMS_ORB/APS/LAPS/OMS_PROP_SYS/OX_FDLINE/TEMP
+
+FD pAnalog_ V43T4216A1
+ATTRIBUTE name_ "LOMS Oxid Feedline Temp"
+ATTRIBUTE defaultLowLimit_ -999999.0
+ATTRIBUTE defaultCautionLowLimit_ 60.0
+ATTRIBUTE defaultCautionHighLimit_ 100.0
+ATTRIBUTE defaultHighLimit_ 999999.0
+ATTRIBUTE poweredBy_ "NO_SUBBUS"
+
+FD pMonitorMode_ NOMSCOMLOMSOXFDLNTMM
+FD pGoNogoState_ NOMSCOMLOMSOXFDLNTGN
+FD stateFD_ NOMSCOMLOMSOXFDLNTST
+
+}
+
+INSTANCE oms_com_ROMS_OX_FDLINE_T
+{
+   PATH /OMS_ORB/APS/RAPS/OMS_PROP_SYS/OX_FDLINE/TEMP
+
+FD pAnalog_ V43T5216A1
+ATTRIBUTE name_ "ROMS Oxid Feedline Temp"
+ATTRIBUTE defaultLowLimit_ 67.0
+ATTRIBUTE defaultCautionLowLimit_ 70.0
+ATTRIBUTE defaultCautionHighLimit_ 95.0
+ATTRIBUTE defaultHighLimit_ 98.0
+ATTRIBUTE poweredBy_ "NO_SUBBUS"
+
+FD pMonitorMode_ NOMSCOMROMSOXFDLNTMM
+FD pGoNogoState_ NOMSCOMROMSOXFDLNTGN
+FD stateFD_ NOMSCOMROMSOXFDLNTST
+}
+
+

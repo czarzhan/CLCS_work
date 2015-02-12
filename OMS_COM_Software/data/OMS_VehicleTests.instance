@@ -1,0 +1,36 @@
+//=============================================================================
+//
+// NAME: OMS_VehicleTests.instance 
+//
+// OVERVIEW: Instance data for the CautionAndWarningTest and CockpitMeterTest
+//           classes.
+//
+// RESPONSIBLE ENGINEER: Craig Roth
+//
+//=============================================================================
+
+INSTANCE oms_com_OmsRcsCautionAndWarning
+{
+   PATH /OMS_ORB/CAUTION_AND_WARNING
+   
+   FD pFwdRcsFd_   V72X6035XL
+   FD pLeftRcsFd_  V72X6036XL
+   FD pLeftOmsFd_  V72X4547XL
+   FD pRightRcsFd_ V72X6037XL
+   FD pRightOmsFd_ V72X4548XL
+}
+
+INSTANCE oms_com_CockpitMeter
+{
+   PATH /OMS_ORB/COCKPIT_METER
+
+   FD pFrcsOxidQty_ V72Q1370CL
+   FD pFrcsFuelQty_ V72Q1371CL
+   FD pFrcsLowest_  V72Q1372CL
+   FD pLrcsOxidQty_ V72Q1374CL
+   FD pLrcsFuelQty_ V72Q1375CL
+   FD pLrcsLowest_  V72Q1376CL
+   FD pRrcsOxidQty_ V72Q1378CL
+   FD pRrcsFuelQty_ V72Q1379CL
+   FD pRrcsLowest_  V72Q1380CL
+}

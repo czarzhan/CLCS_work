@@ -1,0 +1,53 @@
+//*****************************************************************************
+//** MODULE: OMS_Plumbing_ObjAdaptor                                         **
+//**                                                                         **
+//** OVERVIEW: This IDL module defines the CORBA Object Adaptors for the OMS **
+//**           Plumbing IPC Interfaces.                                      **
+//**                                                                         **
+//**                                                                         **
+//** RESPONSIBLE ENGINEER: Craig Roth                                        **
+//**                                                                         **
+//*****************************************************************************
+#ifndef OMS_PLUMBING_OBJADAPTOR_IDL    
+#define OMS_PLUMBING_OBJADAPTOR_IDL    
+
+#include "OMS_OmsBase_ObjAdaptor.idl"
+
+// -------------------------------------------------------------------------
+/**
+* The OMS_Plumbing_ObjAdaptor IDL module defines the CORBA Object Adaptors
+* for the OMS VehiclePlumbing IPC interfaces.
+* 
+*/
+// -------------------------------------------------------------------------
+module OMS_Plumbing_ObjAdaptor {
+    
+   //----------------------------------------------------------------------
+   /**
+   * OMS_VehiclePlumbing
+   */
+   //----------------------------------------------------------------------
+   interface VehiclePlumbing : OMS_OmsBase_ObjAdaptor::BaseObject
+   {
+
+      long toggleContaminationState();
+
+   }; // end VehiclePlumbing
+
+   //----------------------------------------------------------------------
+   /**
+   * CrossfeedLine - inherits from the OMS_VehiclePlumbing interface
+   */
+   //----------------------------------------------------------------------
+   interface CrossfeedLine : OMS_Plumbing_ObjAdaptor::VehiclePlumbing
+   {
+
+      long toggleLeftFlangeState();
+
+      long toggleRightFlangeState();
+
+   }; // end CrossfeedLine
+
+}; // end OMS_Plumbing_ObjAdaptor
+
+#endif // OMS_PLUMBING_OBJADAPTOR_IDL

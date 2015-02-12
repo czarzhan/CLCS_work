@@ -1,0 +1,82 @@
+//=============================================================================
+//
+// NAME: OMS_CrossfeedLines.instance
+//
+// OVERVIEW: Defines the instance data for the Crossfeed lines and aggregates.
+//
+// RESPONSIBLE ENGINEER: Craig Roth
+//
+//=============================================================================
+
+
+//---------------------------------------------------------------------
+// Crossfeed Lines
+//---------------------------------------------------------------------
+
+INSTANCE oms_com_XFD_OX
+{
+   PATH /OMS_ORB/APS/XFD_OX
+   FD pLeftFlangeState_ NOMSCOMLTOXXFDFLGST
+   FD pRightFlangeState_ NOMSCOMRTOXXFDFLGST
+   FD pState_ NOMSCOMOXXFDST
+}
+
+
+INSTANCE oms_com_XFD_FU
+{
+   PATH /OMS_ORB/APS/XFD_FU
+   FD pLeftFlangeState_ NOMSCOMLTFUXFDFLGST
+   FD pRightFlangeState_ NOMSCOMRTFUXFDFLGST
+   FD pState_ NOMSCOMFUXFDST
+}
+
+
+
+//---------------------------------------------------------------------
+//Analog With 3 Offsets Default and LCC Limits
+//---------------------------------------------------------------------
+
+INSTANCE oms_com_XFD_FU_P
+{
+   PATH /OMS_ORB/APS/XFD_FU/PRESS
+   FD pAnalog_ V43P6245C1
+   ATTRIBUTE name_ "Fuel Crossfeed Press"
+   ATTRIBUTE defaultLowLimit_ -999999.0
+   ATTRIBUTE defaultCautionLowLimit_ -999999.0
+   ATTRIBUTE defaultCautionHighLimit_ 286.0
+   ATTRIBUTE defaultHighLimit_ 290.0
+   FD stateFD_ NOMSCOMXFDFUPST
+   ATTRIBUTE poweredBy_ "NO_SUBBUS"
+   FD pMonitorMode_ NOMSCOMXFDFUPMM
+   FD pGoNogoState_ NOMSCOMXFDFUPGN
+   FD pOffset1_ NOMSCOMXFDFUPO1
+   FD pOffset2_ NOMSCOMXFDFUPO2
+   FD pOffset3_ NOMSCOMXFDFUPO3
+   FD pOffsetCorrected_ NOMSCOMXFDFUPOC
+   ATTRIBUTE CALPOINT1 50
+   ATTRIBUTE CALPOINT2 150
+   ATTRIBUTE CALPOINT3 265
+}
+
+
+INSTANCE oms_com_XFD_OX_P
+{
+   PATH /OMS_ORB/APS/XFD_OX/PRESS
+   FD pAnalog_ V43P6246C1
+   ATTRIBUTE name_ "Oxidizer Crossfeed Press"
+   ATTRIBUTE defaultLowLimit_ -999999.0
+   ATTRIBUTE defaultCautionLowLimit_ -999999.0
+   ATTRIBUTE defaultCautionHighLimit_ 286.0
+   ATTRIBUTE defaultHighLimit_ 290.0
+   FD stateFD_ NOMSCOMXFDOXPST
+   ATTRIBUTE poweredBy_ "NO_SUBBUS"
+   FD pMonitorMode_ NOMSCOMXFDOXPMM
+   FD pGoNogoState_ NOMSCOMXFDOXPGN
+   FD pOffset1_ NOMSCOMXFDOXPO1
+   FD pOffset2_ NOMSCOMXFDOXPO2
+   FD pOffset3_ NOMSCOMXFDOXPO3
+   FD pOffsetCorrected_ NOMSCOMXFDOXPOC
+   ATTRIBUTE CALPOINT1 50
+   ATTRIBUTE CALPOINT2 150
+   ATTRIBUTE CALPOINT3 265
+}
